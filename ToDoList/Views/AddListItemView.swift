@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct AddListItemView: View {
-    @State private var textFieldText: String = ""
+    @Environment(\.dismiss) var dismiss
+    @Binding var textFieldText: String
     @FocusState var isTextFieldFocused: Bool
 
     var body: some View {
@@ -17,7 +18,7 @@ struct AddListItemView: View {
                 .focused($isTextFieldFocused)
 
             Button {
-                debugPrint("Item saved")
+                dismiss()
             } label: {
                 Text("Save")
                     .textCase(.uppercase)
