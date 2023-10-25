@@ -7,19 +7,14 @@ struct ToDoListApp: App {
             ListView(list: [
                 .init(
                     id: .init(),
-                    text: "One",
+                    text: "Finish assignment",
                     isCompleted: false
                 ),
                 .init(
                     id: .init(),
-                    text: "Two",
+                    text: "Bake a cake",
                     isCompleted: false
-                ),
-                .init(
-                    id: .init(),
-                    text: "Three",
-                    isCompleted: false
-                ),
+                )
             ])
         }
     }

@@ -14,22 +14,14 @@ struct ListView: View {
             .listStyle(.plain)
             .navigationTitle("To-Do List")
             .navigationBarTitleDisplayMode(.automatic)
-            .navigationBarItems(trailing:
-                Button {
-                    list.append(
-                        .init(
-                            id: .init(),
-                            text: "New",
-                            isCompleted: false
-                        )
-                    )
-                } label: {
+            .navigationBarItems(
+                trailing: NavigationLink(destination: AddListItemView()) {
                     Image(systemName: "plus")
                         .resizable()
-                        .foregroundColor(.black)
                 }
             )
         }
+        .accentColor(.black)
     }
 
     private func deleteItem(at offsets: IndexSet) {
