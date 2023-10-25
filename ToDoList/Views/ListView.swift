@@ -4,13 +4,32 @@ struct ListView: View {
     @State var list: [ToDoItem]
 
     var body: some View {
-        List {
-            ForEach(list) { item in
-                ListItemView(item: item)
+        NavigationView {
+            List {
+                ForEach(list) { item in
+                    ListItemView(item: item)
+                }
+                .onDelete(perform: deleteItem)
             }
-            .onDelete(perform: deleteItem)
+            .listStyle(.plain)
+            .navigationTitle("To-Do List")
+            .navigationBarTitleDisplayMode(.automatic)
+            .navigationBarItems(trailing:
+                Button {
+                    list.append(
+                        .init(
+                            id: .init(),
+                            text: "New",
+                            isCompleted: false
+                        )
+                    )
+                } label: {
+                    Image(systemName: "plus")
+                        .resizable()
+                        .foregroundColor(.black)
+                }
+            )
         }
-        .listStyle(.plain)
     }
 
     private func deleteItem(at offsets: IndexSet) {
