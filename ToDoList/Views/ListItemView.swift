@@ -10,7 +10,7 @@ struct ListItemView: View {
                 .frame(width: 20, height: 20)
 
             Text("\(item.text)")
-                .font(.caption)
+                .font(.subheadline)
                 .foregroundColor(.black)
         }
         .onTapGesture {
