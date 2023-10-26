@@ -2,16 +2,21 @@ import SwiftUI
 
 struct ListView: View {
     @StateObject private var viewModel: ListModuleViewModel
+    private let listItemModuleBuilder: ListItemModuleBuilder
 
-    init(viewModel: StateObject<ListModuleViewModel>) {
+    init(
+        viewModel: StateObject<ListModuleViewModel>,
+        listItemModuleBuilder: ListItemModuleBuilder
+    ) {
         self._viewModel = viewModel
+        self.listItemModuleBuilder = listItemModuleBuilder
     }
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.list) { item in
-                    ListItemView(item: item)
+                    listItemModuleBuilder.view(item: item)
                 }
                 .onDelete { index in
                     viewModel.viewDidSelectDeleteItem(at: index)

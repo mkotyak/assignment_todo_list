@@ -1,24 +1,24 @@
 import SwiftUI
 
 struct ListItemView: View {
-    @State var item: ToDoItem
+    @StateObject private var viewModel: ListItemModuleViewModel
+
+    init(viewModel: StateObject<ListItemModuleViewModel>) {
+        self._viewModel = viewModel
+    }
 
     var body: some View {
         HStack {
-            Image(systemName: item.isCompleted ? "checkmark.circle" : "circle")
+            Image(systemName: viewModel.checkmarkImageName)
                 .resizable()
                 .frame(width: 20, height: 20)
 
-            Text("\(item.text)")
+            Text("\(viewModel.text)")
                 .font(.subheadline)
                 .foregroundColor(.black)
         }
         .onTapGesture {
-            toggleCompletionState()
+            viewModel.viewDidSelectToggleCompletionState()
         }
-    }
-
-    private func toggleCompletionState() {
-        item.isCompleted.toggle()
     }
 }
