@@ -1,11 +1,18 @@
 import Foundation
 
 final class StorageService {
+    enum Constants {
+        static var storageKey: String { "ToDoItems" }
+    }
+
     private var storedItems: [ToDoItem] = []
+
     private lazy var queue = DispatchQueue(
         label: String(describing: self),
         attributes: .concurrent
     )
+
+    private lazy var userDefaults: UserDefaults = .standard
 
     static let shared: StorageService = .init()
 
@@ -14,16 +21,33 @@ final class StorageService {
     }
 
     private func read() {
-        // Read from the user defaults
+        let decoder = JSONDecoder()
 
-//        storedItems = [
-//            .init(text: "Finish assignment"),
-//            .init(text: "Bake a cake")
-//        ]
+        guard let data = userDefaults.data(forKey: Constants.storageKey) else {
+            storedItems = []
+            return
+        }
+
+        guard let items = try? decoder.decode([ToDoItem].self, from: data) else {
+            assertionFailure("🚨 Unable to decode items")
+            return
+        }
+
+        storedItems = items
     }
 
     private func write() {
-        // Write to the user defaults
+        let encoder = JSONEncoder()
+
+        guard let data = try? encoder.encode(storedItems) else {
+            assertionFailure("🚨 Unable to encode data")
+            return
+        }
+
+        userDefaults.set(
+            data,
+            forKey: Constants.storageKey
+        )
     }
 }
 
