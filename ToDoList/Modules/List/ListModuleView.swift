@@ -37,7 +37,7 @@ struct ListModuleView: View {
                 viewModel.viewDidAppear()
             }
         }
-        .accentColor(.black)
+        .accentColor(.accent)
     }
 
     private var listView: some View {
