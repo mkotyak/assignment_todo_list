@@ -1,23 +1,15 @@
 import Foundation
 
 struct ListModuleModel {
+    private let storageService: StorageServiceProtocol
     private(set) var items: [ToDoItem] = []
-    // private let storageService: StorageServiceProtocol
 
     private var availableItems: [ToDoItem] {
-        // Retrieve list from storage
-        [
-            .init(text: "Finish assignment"),
-            .init(text: "Bake a cake")
-        ]
+        storageService.items()
     }
 
-//    init(storageService: StorageServiceProtocol) {
-//        self.storageService = storageService
-//        list = availableItems
-//    }
-
-    init() {
+    init(storageService: StorageServiceProtocol) {
+        self.storageService = storageService
         items = availableItems
     }
 

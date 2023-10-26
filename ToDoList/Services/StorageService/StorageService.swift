@@ -14,7 +14,10 @@ final class StorageService {
     }
 
     private func read() {
-        // Read from the user defaults
+        storedItems = [
+            .init(text: "Finish assignment"),
+            .init(text: "Bake a cake")
+        ]
     }
 
     private func write() {

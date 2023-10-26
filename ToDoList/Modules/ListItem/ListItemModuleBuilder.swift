@@ -6,7 +6,10 @@ final class ListItemModuleBuilder {
         ListItemModuleView(
             viewModel: StateObject(
                 wrappedValue: ListItemModuleViewModel(
-                    model: ListItemModuleModel(item: item)
+                    model: ListItemModuleModel(
+                        storageService: StorageService.shared,
+                        item: item
+                    )
                 )
             )
         )

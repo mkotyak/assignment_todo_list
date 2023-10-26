@@ -6,7 +6,9 @@ final class AddListItemModuleBuilder {
         AddListItemModuleView(
             viewModel: StateObject(
                 wrappedValue: AddListItemModuleViewModel(
-                    model: AddListItemModuleModel()
+                    model: AddListItemModuleModel(
+                        storageService: StorageService.shared
+                    )
                 )
             )
         )

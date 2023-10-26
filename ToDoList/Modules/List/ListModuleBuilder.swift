@@ -5,7 +5,9 @@ final class ListModuleBuilder {
         ListModuleView(
             viewModel: StateObject(
                 wrappedValue: ListModuleViewModel(
-                    model: ListModuleModel()
+                    model: ListModuleModel(
+                        storageService: StorageService.shared
+                    )
                 )
             ),
             listItemModuleBuilder: .init(),

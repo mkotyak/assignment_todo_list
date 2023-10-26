@@ -1,15 +1,21 @@
 import Foundation
 
 struct ListItemModuleModel {
+    private let storageService: StorageServiceProtocol
     private(set) var item: ToDoItem {
         didSet {
-            // save updated togle state
+            storageService.update(
+                isCompleted: item.isCompleted,
+                for: item.id
+            )
         }
     }
 
-    // private let storageService: storageServiceProtocol
-
-    init(item: ToDoItem) {
+    init(
+        storageService: StorageServiceProtocol,
+        item: ToDoItem
+    ) {
+        self.storageService = storageService
         self.item = item
     }
 

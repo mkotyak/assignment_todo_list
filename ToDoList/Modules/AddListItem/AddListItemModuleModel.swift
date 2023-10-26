@@ -1,12 +1,16 @@
 import Foundation
 
 struct AddListItemModuleModel {
-//    private let storageService: StorageServiceProtocol
+    private let storageService: StorageServiceProtocol
     var newItemText: String = ""
 
-//    init(storageService: StorageServiceProtocol) {
-//        self.storageService = storageService
-//    }
+    init(storageService: StorageServiceProtocol) {
+        self.storageService = storageService
+    }
 
-    func save() {}
+    func save() {
+        storageService.add(newItem: .init(
+            text: newItemText
+        ))
+    }
 }
