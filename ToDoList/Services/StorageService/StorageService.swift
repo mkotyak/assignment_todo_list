@@ -1,7 +1,7 @@
 import Foundation
 
 final class StorageService {
-    enum Constants {
+    private enum Constants {
         static var storageKey: String { "ToDoItems" }
     }
 
@@ -28,26 +28,22 @@ final class StorageService {
             return
         }
 
-        guard let items = try? decoder.decode([ToDoItem].self, from: data) else {
-            assertionFailure("🚨 Unable to decode items")
-            return
+        do {
+            storedItems = try decoder.decode([ToDoItem].self, from: data)
+        } catch {
+            assertionFailure(error.localizedDescription)
         }
-
-        storedItems = items
     }
 
     private func write() {
         let encoder = JSONEncoder()
 
-        guard let data = try? encoder.encode(storedItems) else {
-            assertionFailure("🚨 Unable to encode data")
-            return
+        do {
+            let data = try encoder.encode(storedItems)
+            userDefaults.set(data, forKey: Constants.storageKey)
+        } catch {
+            assertionFailure(error.localizedDescription)
         }
-
-        userDefaults.set(
-            data,
-            forKey: Constants.storageKey
-        )
     }
 }
 
