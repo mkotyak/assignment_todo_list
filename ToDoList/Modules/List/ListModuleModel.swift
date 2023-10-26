@@ -6,16 +6,10 @@ struct ListModuleModel {
 
     private var availableItems: [ToDoItem] {
         // Retrieve list from storage
-        [.init(
-            id: .init(),
-            text: "Finish assignment",
-            isCompleted: false
-        ),
-        .init(
-            id: .init(),
-            text: "Bake a cake",
-            isCompleted: false
-        )]
+        [
+            .init(text: "Finish assignment"),
+            .init(text: "Bake a cake")
+        ]
     }
 
 //    init(storageService: StorageServiceProtocol) {
@@ -29,16 +23,6 @@ struct ListModuleModel {
 
     mutating func reloadList() {
         items = availableItems
-    }
-
-    mutating func addItem(with text: String) {
-        items.append(
-            .init(
-                id: .init(),
-                text: text,
-                isCompleted: false
-            )
-        )
     }
 
     mutating func deleteItem(at offsets: IndexSet) {
