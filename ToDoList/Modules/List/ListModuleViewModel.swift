@@ -1,6 +1,6 @@
 import Foundation
 
-class ListModuleViewModel: ObservableObject {
+final class ListModuleViewModel: ObservableObject {
     @Published var model: ListModuleModel
 
     var list: [ToDoItem] {

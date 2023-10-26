@@ -1,6 +1,6 @@
 import Foundation
 
-class ListItemModuleViewModel: ObservableObject {
+final class ListItemModuleViewModel: ObservableObject {
     @Published var model: ListItemModuleModel
 
     var text: String {

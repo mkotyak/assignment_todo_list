@@ -2,14 +2,18 @@ import SwiftUI
 
 struct ListView: View {
     @StateObject private var viewModel: ListModuleViewModel
+
     private let listItemModuleBuilder: ListItemModuleBuilder
+    private let addListItemModuleBuilder: AddListItemModuleBuilder
 
     init(
         viewModel: StateObject<ListModuleViewModel>,
-        listItemModuleBuilder: ListItemModuleBuilder
+        listItemModuleBuilder: ListItemModuleBuilder,
+        addListItemModuleBuilder: AddListItemModuleBuilder
     ) {
         self._viewModel = viewModel
         self.listItemModuleBuilder = listItemModuleBuilder
+        self.addListItemModuleBuilder = addListItemModuleBuilder
     }
 
     var body: some View {
@@ -26,7 +30,7 @@ struct ListView: View {
             .navigationTitle("To-Do List")
             .navigationBarTitleDisplayMode(.automatic)
             .navigationBarItems(
-                trailing: NavigationLink(destination: AddListItemView()) {
+                trailing: NavigationLink(destination: addListItemModuleBuilder.view()) {
                     Image(systemName: "plus")
                         .resizable()
                 }

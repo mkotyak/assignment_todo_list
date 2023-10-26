@@ -8,7 +8,8 @@ final class ListModuleBuilder {
                     model: ListModuleModel()
                 )
             ),
-            listItemModuleBuilder: .init()
+            listItemModuleBuilder: .init(),
+            addListItemModuleBuilder: .init()
         )
     }
 }
