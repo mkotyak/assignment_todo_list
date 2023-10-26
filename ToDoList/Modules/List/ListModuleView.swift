@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ListView: View {
+struct ListModuleView: View {
     @StateObject private var viewModel: ListModuleViewModel
 
     private let listItemModuleBuilder: ListItemModuleBuilder

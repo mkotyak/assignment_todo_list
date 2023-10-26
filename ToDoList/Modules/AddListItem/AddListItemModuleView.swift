@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AddListItemView: View {
+struct AddListItemModuleView: View {
     @StateObject var viewModel: AddListItemModuleViewModel
     @Environment(\.dismiss) var dismiss
     @FocusState var isTextFieldFocused: Bool

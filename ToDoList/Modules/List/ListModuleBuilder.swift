@@ -1,8 +1,8 @@
 import SwiftUI
 
 final class ListModuleBuilder {
-    func view() -> ListView {
-        ListView(
+    func view() -> ListModuleView {
+        ListModuleView(
             viewModel: StateObject(
                 wrappedValue: ListModuleViewModel(
                     model: ListModuleModel()
