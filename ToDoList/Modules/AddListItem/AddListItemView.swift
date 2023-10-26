@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddListItemView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var textFieldText: String
+    @State var textFieldText: String = ""
     @FocusState var isTextFieldFocused: Bool
 
     var body: some View {

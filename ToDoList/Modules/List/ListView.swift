@@ -1,49 +1,35 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var list: [ToDoItem]
-    @State var newListItemText: String = ""
+    @StateObject private var viewModel: ListModuleViewModel
+
+    init(viewModel: StateObject<ListModuleViewModel>) {
+        self._viewModel = viewModel
+    }
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(list) { item in
+                ForEach(viewModel.list) { item in
                     ListItemView(item: item)
                 }
-                .onDelete(perform: deleteItem)
+                .onDelete { index in
+                    viewModel.viewDidSelectDeleteItem(at: index)
+                }
             }
             .listStyle(.plain)
             .navigationTitle("To-Do List")
             .navigationBarTitleDisplayMode(.automatic)
             .navigationBarItems(
-                trailing: NavigationLink(destination: AddListItemView(textFieldText: $newListItemText)) {
+                trailing: NavigationLink(destination: AddListItemView()) {
                     Image(systemName: "plus")
                         .resizable()
                 }
             )
             .onAppear {
-                guard !newListItemText.isEmpty else {
-                    return
-                }
-
-                createItem(with: newListItemText)
-                newListItemText = ""
+                viewModel.viewDidAppear()
             }
         }
         .accentColor(.black)
-    }
-
-    private func deleteItem(at offsets: IndexSet) {
-        list.remove(atOffsets: offsets)
-    }
-
-    private func createItem(with text: String) {
-        list.append(
-            .init(
-                id: .init(),
-                text: text,
-                isCompleted: false
-            )
-        )
     }
 }
