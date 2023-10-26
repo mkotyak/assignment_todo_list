@@ -12,6 +12,10 @@ final class AddListItemModuleViewModel: ObservableObject {
         }
     }
 
+    var isSaveDisabled: Bool {
+        newItemTextBinding.wrappedValue.isEmpty
+    }
+
     init(model: AddListItemModuleModel) {
         self.model = model
     }

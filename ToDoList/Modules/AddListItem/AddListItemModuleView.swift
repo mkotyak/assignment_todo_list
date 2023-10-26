@@ -50,8 +50,9 @@ struct AddListItemModuleView: View {
                 .font(.headline)
                 .frame(height: 50)
                 .frame(maxWidth: .infinity)
-                .background(Color.gray)
+                .background(viewModel.isSaveDisabled ? .gray : .black.opacity(0.7))
                 .cornerRadius(10)
         }
+        .disabled(viewModel.isSaveDisabled)
     }
 }
