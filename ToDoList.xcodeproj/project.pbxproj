@@ -10,6 +10,15 @@
 		730204002AE95D910027A2DE /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730203FF2AE95D910027A2DE /* ToDoItem.swift */; };
 		7302040C2AE95FA30027A2DE /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302040B2AE95FA30027A2DE /* ListItemView.swift */; };
 		730204122AE96D340027A2DE /* AddListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204112AE96D340027A2DE /* AddListItemView.swift */; };
+		730204182AEA389E0027A2DE /* AddListItemModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204172AEA389E0027A2DE /* AddListItemModuleModel.swift */; };
+		7302041A2AEA38B60027A2DE /* AddListItemModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204192AEA38B60027A2DE /* AddListItemModuleViewModel.swift */; };
+		7302041C2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302041B2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift */; };
+		7302041E2AEA38CE0027A2DE /* ListModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302041D2AEA38CE0027A2DE /* ListModuleModel.swift */; };
+		730204202AEA38D70027A2DE /* ListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302041F2AEA38D70027A2DE /* ListModuleViewModel.swift */; };
+		730204222AEA38E00027A2DE /* ListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204212AEA38E00027A2DE /* ListModuleBuilder.swift */; };
+		730204242AEA38F10027A2DE /* ListItemModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204232AEA38F10027A2DE /* ListItemModuleModel.swift */; };
+		730204262AEA38F90027A2DE /* ListItemModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204252AEA38F90027A2DE /* ListItemModuleViewModel.swift */; };
+		730204282AEA38FF0027A2DE /* ListItemModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204272AEA38FF0027A2DE /* ListItemModuleBuilder.swift */; };
 		7310ED6D2AE959CD0058C2C4 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */; };
 		7310ED6F2AE959CD0058C2C4 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310ED6E2AE959CD0058C2C4 /* ListView.swift */; };
 		7310ED712AE959CE0058C2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7310ED702AE959CE0058C2C4 /* Assets.xcassets */; };
@@ -20,6 +29,15 @@
 		730203FF2AE95D910027A2DE /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		7302040B2AE95FA30027A2DE /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		730204112AE96D340027A2DE /* AddListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListItemView.swift; sourceTree = "<group>"; };
+		730204172AEA389E0027A2DE /* AddListItemModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListItemModuleModel.swift; sourceTree = "<group>"; };
+		730204192AEA38B60027A2DE /* AddListItemModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListItemModuleViewModel.swift; sourceTree = "<group>"; };
+		7302041B2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListItemModuleBuilder.swift; sourceTree = "<group>"; };
+		7302041D2AEA38CE0027A2DE /* ListModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleModel.swift; sourceTree = "<group>"; };
+		7302041F2AEA38D70027A2DE /* ListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleViewModel.swift; sourceTree = "<group>"; };
+		730204212AEA38E00027A2DE /* ListModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleBuilder.swift; sourceTree = "<group>"; };
+		730204232AEA38F10027A2DE /* ListItemModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleModel.swift; sourceTree = "<group>"; };
+		730204252AEA38F90027A2DE /* ListItemModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleViewModel.swift; sourceTree = "<group>"; };
+		730204272AEA38FF0027A2DE /* ListItemModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleBuilder.swift; sourceTree = "<group>"; };
 		7310ED692AE959CD0058C2C4 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		7310ED6E2AE959CD0058C2C4 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -49,11 +67,51 @@
 		730203FE2AE95D4D0027A2DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				730204112AE96D340027A2DE /* AddListItemView.swift */,
-				7302040B2AE95FA30027A2DE /* ListItemView.swift */,
-				7310ED6E2AE959CD0058C2C4 /* ListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		730204132AEA38390027A2DE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				730204142AEA38470027A2DE /* AddListItem */,
+				730204162AEA38730027A2DE /* List */,
+				730204152AEA38650027A2DE /* ListItem */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		730204142AEA38470027A2DE /* AddListItem */ = {
+			isa = PBXGroup;
+			children = (
+				7302041B2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift */,
+				730204172AEA389E0027A2DE /* AddListItemModuleModel.swift */,
+				730204192AEA38B60027A2DE /* AddListItemModuleViewModel.swift */,
+				730204112AE96D340027A2DE /* AddListItemView.swift */,
+			);
+			path = AddListItem;
+			sourceTree = "<group>";
+		};
+		730204152AEA38650027A2DE /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+				730204272AEA38FF0027A2DE /* ListItemModuleBuilder.swift */,
+				730204232AEA38F10027A2DE /* ListItemModuleModel.swift */,
+				730204252AEA38F90027A2DE /* ListItemModuleViewModel.swift */,
+				7302040B2AE95FA30027A2DE /* ListItemView.swift */,
+			);
+			path = ListItem;
+			sourceTree = "<group>";
+		};
+		730204162AEA38730027A2DE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				730204212AEA38E00027A2DE /* ListModuleBuilder.swift */,
+				7302041D2AEA38CE0027A2DE /* ListModuleModel.swift */,
+				7302041F2AEA38D70027A2DE /* ListModuleViewModel.swift */,
+				7310ED6E2AE959CD0058C2C4 /* ListView.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		7310ED602AE959CD0058C2C4 = {
@@ -75,11 +133,12 @@
 		7310ED6B2AE959CD0058C2C4 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */,
 				7310ED702AE959CE0058C2C4 /* Assets.xcassets */,
 				730203FD2AE95D480027A2DE /* Models */,
-				730203FE2AE95D4D0027A2DE /* Views */,
+				730204132AEA38390027A2DE /* Modules */,
 				7310ED722AE959CE0058C2C4 /* Preview Content */,
-				7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */,
+				730203FE2AE95D4D0027A2DE /* Views */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -164,8 +223,17 @@
 			files = (
 				7310ED6F2AE959CD0058C2C4 /* ListView.swift in Sources */,
 				7310ED6D2AE959CD0058C2C4 /* ToDoListApp.swift in Sources */,
+				730204202AEA38D70027A2DE /* ListModuleViewModel.swift in Sources */,
+				730204222AEA38E00027A2DE /* ListModuleBuilder.swift in Sources */,
+				7302041C2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift in Sources */,
+				730204182AEA389E0027A2DE /* AddListItemModuleModel.swift in Sources */,
+				730204282AEA38FF0027A2DE /* ListItemModuleBuilder.swift in Sources */,
 				730204122AE96D340027A2DE /* AddListItemView.swift in Sources */,
+				7302041A2AEA38B60027A2DE /* AddListItemModuleViewModel.swift in Sources */,
+				7302041E2AEA38CE0027A2DE /* ListModuleModel.swift in Sources */,
 				7302040C2AE95FA30027A2DE /* ListItemView.swift in Sources */,
+				730204242AEA38F10027A2DE /* ListItemModuleModel.swift in Sources */,
+				730204262AEA38F90027A2DE /* ListItemModuleViewModel.swift in Sources */,
 				730204002AE95D910027A2DE /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
