@@ -18,15 +18,13 @@ struct ListModuleView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.list) { item in
-                    listItemModuleBuilder.view(item: item)
-                }
-                .onDelete { index in
-                    viewModel.viewDidSelectDeleteItem(at: index)
+            Group {
+                if viewModel.hasItems {
+                    listView
+                } else {
+                    emptyListView
                 }
             }
-            .listStyle(.plain)
             .navigationTitle("To-Do List")
             .navigationBarTitleDisplayMode(.automatic)
             .navigationBarItems(
@@ -40,5 +38,23 @@ struct ListModuleView: View {
             }
         }
         .accentColor(.black)
+    }
+
+    private var listView: some View {
+        List {
+            ForEach(viewModel.list) { item in
+                listItemModuleBuilder.view(item: item)
+            }
+            .onDelete { index in
+                viewModel.viewDidSelectDeleteItem(at: index)
+            }
+        }
+        .listStyle(.plain)
+    }
+
+    private var emptyListView: some View {
+        Text("No Items")
+            .foregroundColor(.gray)
+            .font(.subheadline)
     }
 }

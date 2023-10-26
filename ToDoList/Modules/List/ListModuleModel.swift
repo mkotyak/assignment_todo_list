@@ -18,6 +18,7 @@ struct ListModuleModel {
     }
 
     mutating func deleteItem(at offsets: IndexSet) {
-        items.remove(atOffsets: offsets)
+        storageService.delete(at: offsets)
+        reloadList()
     }
 }

@@ -14,10 +14,12 @@ final class StorageService {
     }
 
     private func read() {
-        storedItems = [
-            .init(text: "Finish assignment"),
-            .init(text: "Bake a cake")
-        ]
+        // Read from the user defaults
+
+//        storedItems = [
+//            .init(text: "Finish assignment"),
+//            .init(text: "Bake a cake")
+//        ]
     }
 
     private func write() {
@@ -36,6 +38,20 @@ extension StorageService: StorageServiceProtocol {
         queue.async(flags: .barrier) { [weak self] in
             self?.storedItems.append(newItem)
             self?.write()
+        }
+    }
+
+    func delete(at offsets: IndexSet) {
+        queue.async(flags: .barrier) { [weak self] in
+            guard
+                let self,
+                !storedItems.isEmpty
+            else {
+                return
+            }
+
+            storedItems.remove(atOffsets: offsets)
+            write()
         }
     }
 

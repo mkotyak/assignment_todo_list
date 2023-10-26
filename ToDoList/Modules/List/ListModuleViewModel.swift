@@ -7,6 +7,10 @@ final class ListModuleViewModel: ObservableObject {
         model.items
     }
 
+    var hasItems: Bool {
+        !model.items.isEmpty
+    }
+
     init(model: ListModuleModel) {
         self.model = model
     }
