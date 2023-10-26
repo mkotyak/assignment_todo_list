@@ -7,8 +7,6 @@ struct AddListItemModuleModel {
 //    init(storageService: StorageServiceProtocol) {
 //        self.storageService = storageService
 //    }
-    
-    func save() {
-        
-    }
+
+    func save() {}
 }

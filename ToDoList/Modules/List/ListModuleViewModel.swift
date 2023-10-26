@@ -4,7 +4,7 @@ final class ListModuleViewModel: ObservableObject {
     @Published var model: ListModuleModel
 
     var list: [ToDoItem] {
-        model.list
+        model.items
     }
 
     init(model: ListModuleModel) {

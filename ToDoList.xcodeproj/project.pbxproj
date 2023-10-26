@@ -19,6 +19,8 @@
 		730204242AEA38F10027A2DE /* ListItemModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204232AEA38F10027A2DE /* ListItemModuleModel.swift */; };
 		730204262AEA38F90027A2DE /* ListItemModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204252AEA38F90027A2DE /* ListItemModuleViewModel.swift */; };
 		730204282AEA38FF0027A2DE /* ListItemModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730204272AEA38FF0027A2DE /* ListItemModuleBuilder.swift */; };
+		7302042C2AEA58D60027A2DE /* StorageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302042B2AEA58D60027A2DE /* StorageServiceProtocol.swift */; };
+		7302042E2AEA58E90027A2DE /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302042D2AEA58E90027A2DE /* StorageService.swift */; };
 		7310ED6D2AE959CD0058C2C4 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */; };
 		7310ED6F2AE959CD0058C2C4 /* ListModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310ED6E2AE959CD0058C2C4 /* ListModuleView.swift */; };
 		7310ED712AE959CE0058C2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7310ED702AE959CE0058C2C4 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		730204232AEA38F10027A2DE /* ListItemModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleModel.swift; sourceTree = "<group>"; };
 		730204252AEA38F90027A2DE /* ListItemModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleViewModel.swift; sourceTree = "<group>"; };
 		730204272AEA38FF0027A2DE /* ListItemModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemModuleBuilder.swift; sourceTree = "<group>"; };
+		7302042B2AEA58D60027A2DE /* StorageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceProtocol.swift; sourceTree = "<group>"; };
+		7302042D2AEA58E90027A2DE /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		7310ED692AE959CD0058C2C4 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7310ED6C2AE959CD0058C2C4 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		7310ED6E2AE959CD0058C2C4 /* ListModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModuleView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,23 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		730204292AEA58BD0027A2DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7302042A2AEA58C70027A2DE /* StorageService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7302042A2AEA58C70027A2DE /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				7302042D2AEA58E90027A2DE /* StorageService.swift */,
+				7302042B2AEA58D60027A2DE /* StorageServiceProtocol.swift */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
 		7310ED602AE959CD0058C2C4 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +159,7 @@
 				730203FD2AE95D480027A2DE /* Models */,
 				730204132AEA38390027A2DE /* Modules */,
 				7310ED722AE959CE0058C2C4 /* Preview Content */,
+				730204292AEA58BD0027A2DE /* Services */,
 				730203FE2AE95D4D0027A2DE /* Views */,
 			);
 			path = ToDoList;
@@ -226,10 +248,12 @@
 				730204202AEA38D70027A2DE /* ListModuleViewModel.swift in Sources */,
 				730204222AEA38E00027A2DE /* ListModuleBuilder.swift in Sources */,
 				7302041C2AEA38BF0027A2DE /* AddListItemModuleBuilder.swift in Sources */,
+				7302042E2AEA58E90027A2DE /* StorageService.swift in Sources */,
 				730204182AEA389E0027A2DE /* AddListItemModuleModel.swift in Sources */,
 				730204282AEA38FF0027A2DE /* ListItemModuleBuilder.swift in Sources */,
 				730204122AE96D340027A2DE /* AddListItemModuleView.swift in Sources */,
 				7302041A2AEA38B60027A2DE /* AddListItemModuleViewModel.swift in Sources */,
+				7302042C2AEA58D60027A2DE /* StorageServiceProtocol.swift in Sources */,
 				7302041E2AEA38CE0027A2DE /* ListModuleModel.swift in Sources */,
 				7302040C2AE95FA30027A2DE /* ListItemModuleView.swift in Sources */,
 				730204242AEA38F10027A2DE /* ListItemModuleModel.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 
 struct ListModuleModel {
-    private(set) var list: [ToDoItem] = []
+    private(set) var items: [ToDoItem] = []
     // private let storageService: StorageServiceProtocol
 
     private var availableItems: [ToDoItem] {
@@ -24,15 +24,15 @@ struct ListModuleModel {
 //    }
 
     init() {
-        list = availableItems
+        items = availableItems
     }
 
     mutating func reloadList() {
-        list = availableItems
+        items = availableItems
     }
 
     mutating func addItem(with text: String) {
-        list.append(
+        items.append(
             .init(
                 id: .init(),
                 text: text,
@@ -42,6 +42,6 @@ struct ListModuleModel {
     }
 
     mutating func deleteItem(at offsets: IndexSet) {
-        list.remove(atOffsets: offsets)
+        items.remove(atOffsets: offsets)
     }
 }
